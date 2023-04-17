@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "f9561cc3-f780-4759-9686-ad302a7c151e",
+		"name": "endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12026940"
+	},
+	"item": [
+		{
+			"name": "Get orders?sortBy=total",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "status",
+						"value": "alsdjflk;j",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"abcdef-123456\",\r\n    \"status\": \"Success\",\r\n    \"items\": [{\r\n    \"id\": \"123456 \",\r\n    \"description\": \"a product description\",\r\n    \"price\": 12.40,\r\n    \"quantity\": 1\r\n    }],\r\n    \"total\": 12.40,\r\n    \"currencyUnit\": \"USD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders?sortBy=total",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "total"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update orders",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "status",
+						"value": "asfdsad",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"asdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders/25dc079c-8a16-416a-acb6-bbb0c2cf69a5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"25dc079c-8a16-416a-acb6-bbb0c2cf69a5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Orders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "status",
+						"value": "asfdsad",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"abcdef-123456\",\r\n    \"status\": \"Success\",\r\n    \"items\": [{\r\n    \"id\": \"123456 \",\r\n    \"description\": \"a product description\",\r\n    \"price\": 12.40,\r\n    \"quantity\": 1\r\n    }],\r\n    \"total\": 5,\r\n    \"currencyUnit\": \"USD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
